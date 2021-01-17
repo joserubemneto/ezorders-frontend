@@ -1,16 +1,28 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+import socketIOClient from 'socket.io-client'
 import { SimpleGrid } from '@chakra-ui/react'
 import Order from './Order'
 
 const Orders = () => {
   const [ orders, setOrders ] = useState([])
+
   useEffect( () => {
     (async () => {
-      const orders = await axios.get("http://localhost:3001/orders")
-      setOrders(orders.data)
+      const response = await fetch("http://localhost:3001/orders")
+      const orders = await response.json()
+      setOrders(orders)
     })()
-  })
+
+    const socket = socketIOClient("http://localhost:3001", {
+      transports: ["websocket"]
+    })
+
+    socket.on("newOrder", (order) => {
+      setOrders(
+        (prevState) => [order, ...prevState],
+      )
+    })
+  }, [])
 
   return (
     <SimpleGrid mt="3rem" columns={[1, 1, 2, 2]} gap="2rem">
