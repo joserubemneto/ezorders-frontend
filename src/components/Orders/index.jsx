@@ -22,7 +22,27 @@ const Orders = () => {
         (prevState) => [order, ...prevState],
       )
     })
+
+    socket.on("statusChange", (updateOrder) => {
+      setOrders(
+        (prevState) => (prevState.map((order) => (
+          order._id === updateOrder._id ? updateOrder : order
+        )))
+      )
+    })
   }, [])
+
+  const handleStatusChange = (order) => {
+    return ({ target: { value } }) => {
+      fetch(`http://localhost:3001/orders/${order._id}/status`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ status: value }),
+      })
+    }
+  }
 
   return (
     <SimpleGrid mt="3rem" columns={[1, 1, 2, 2]} gap="2rem">
@@ -32,7 +52,9 @@ const Orders = () => {
           status={order.status}
           id={order._id} 
           table={order.table}
-          description={order.description}/>
+          description={order.description}
+          onChange={handleStatusChange(order)}
+        />
       ))}
     </SimpleGrid>
   )
