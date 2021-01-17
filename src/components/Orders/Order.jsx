@@ -1,7 +1,7 @@
 import React from 'react'
 import { Flex, Box, Heading, Text, Select } from '@chakra-ui/react'
 
-const Order = ({ status, description, table, id }) => {
+const Order = ({ status, description, table, id, onChange }) => {
   return (
     <Flex
       direction="column"
@@ -57,6 +57,7 @@ const Order = ({ status, description, table, id }) => {
         mt="0.5rem"
         bg={"#FFF"}
         border={ status !== "PENDING" ? "none" : "1px solid #CCC"}
+        onChange={onChange}
       >
         <option value="PENDING">Pending</option>
         <option value="PREPARING">Preparing</option>
