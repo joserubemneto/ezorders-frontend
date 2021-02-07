@@ -1352,6 +1352,21 @@
   dependencies:
     "@chakra-ui/utils" "1.1.0"
 
+"@chakra-ui/icon@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/icon/-/icon-1.1.1.tgz#13317762a58f3e039b14a52f5cf978d037e64b4b"
+  integrity sha512-dL1D1q11MM+cL849jmADSjY8KqOWplAEb/XgLXX/ZZau7GHqYAXIwdYnfXwOYBaypiosUvGsm9g2zU4iHYZtdg==
+  dependencies:
+    "@chakra-ui/utils" "1.2.0"
+
+"@chakra-ui/icons@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/icons/-/icons-1.0.5.tgz#21eee12b9ab12da0430c62ea99e6081a6cec7b14"
+  integrity sha512-l8CgisPAS44ehKLw/hoHI6dfSX7pOAfylv8QkINVPEzhHwnNIg0wHzcm1cGkRXuq3DN8G0z88KmFegFFp02yiA==
+  dependencies:
+    "@chakra-ui/icon" "1.1.1"
+    "@types/react" "^17.0.0"
+
 "@chakra-ui/image@1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@chakra-ui/image/-/image-1.0.3.tgz#67cc85213a65f70e8fe5fa47f4c4a306e3054f13"
@@ -1697,6 +1712,16 @@
     css-box-model "1.2.1"
     lodash.mergewith "4.6.2"
     object-assign "4.1.1"
+
+"@chakra-ui/utils@1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/utils/-/utils-1.2.0.tgz#9385950e91455ecf480eb52bca268d3a5f8c9d6d"
+  integrity sha512-oMTX8BX1+MUf+iYUafFm9tNfwa3m1cqzMcE/5iQFmNcqKlZmuADnVL28Yw7jhoeouIjANaGY+f51qj9zHgDn9Q==
+  dependencies:
+    "@types/lodash.mergewith" "4.6.6"
+    "@types/object-assign" "4.0.30"
+    css-box-model "1.2.1"
+    lodash.mergewith "4.6.2"
 
 "@chakra-ui/visually-hidden@1.0.3":
   version "1.0.3"
@@ -2508,10 +2533,23 @@
   resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.1.5.tgz#b6ab3bba29e16b821d84e09ecfaded462b816b00"
   integrity sha512-UEyp8LwZ4Dg30kVU2Q3amHHyTn1jEdhCIE59ANed76GaT1Vp76DD3ZWSAxgCrw6wJ0TqeoBpqmfUHiUDPs//HQ==
 
+"@types/prop-types@*":
+  version "15.7.3"
+  resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"
+  integrity sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
+
 "@types/q@^1.5.1":
   version "1.5.4"
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.4.tgz#15925414e0ad2cd765bfef58842f7e26a7accb24"
   integrity sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug==
+
+"@types/react@^17.0.0":
+  version "17.0.1"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.1.tgz#eb1f1407dea8da3bc741879c1192aa703ab9975b"
+  integrity sha512-w8t9f53B2ei4jeOqf/gxtc2Sswnc3LBK5s0DyJcg5xd10tMHXts2N31cKjWfH9IC/JvEPa/YF1U4YeP1t4R6HQ==
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^3.0.2"
 
 "@types/resolve@0.0.8":
   version "0.0.8"
