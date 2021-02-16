@@ -8,12 +8,12 @@ const Orders = () => {
 
   useEffect(() => {
     ;(async () => {
-      const response = await fetch('http://localhost:3001/orders')
+      const response = await fetch('https://ezorders--api.herokuapp.com/orders')
       const orders = await response.json()
       setOrders(orders)
     })()
 
-    const socket = socketIOClient('http://localhost:3001', {
+    const socket = socketIOClient('https://ezorders--api.herokuapp.com', {
       transports: ['websocket'],
     })
 
@@ -36,7 +36,7 @@ const Orders = () => {
 
   const handleStatusChange = (order) => {
     return ({ target: { value } }) => {
-      fetch(`http://localhost:3001/orders/${order._id}/status`, {
+      fetch(`https://ezorders--api.herokuapp.com/orders/${order._id}/status`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ const Orders = () => {
     orders.map((order) => {
       if (order.status === 'DONE') doneOrders.push(order)
     })
-    fetch('http://localhost:3001/orders', {
+    fetch('https://ezorders--api.herokuapp.com/orders', {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

@@ -19,7 +19,7 @@ const Waiters = () => {
   const handleSubmit = async () => {
     if (table !== '' && description !== '') {
       setError(false)
-      fetch('http://localhost:3001/orders', {
+      fetch('https://ezorders--api.herokuapp.com/orders', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
