@@ -52,6 +52,8 @@ const Waiters = () => {
       <Flex direction='column' mt='2rem' justify='center'>
         <Text fontSize='1.2rem'>Table number</Text>
         <Input
+          _hover={{ borderColor: '#0A100D' }}
+          borderColor='#0A100D'
           type='number'
           placeholder='Table number'
           value={table}
@@ -61,6 +63,8 @@ const Waiters = () => {
       <Flex direction='column' mt='2rem' justify='center'>
         <Text fontSize='1.2rem'>Order</Text>
         <Textarea
+          _hover={{ borderColor: '#0A100D' }}
+          borderColor='#0A100D'
           placeholder='Order details'
           value={description}
           onChange={({ target }) => setDescription(target.value)}
