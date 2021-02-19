@@ -8,15 +8,15 @@ const Kitchen = () => {
   return (
     <Flex direction='column' mt='3rem'>
       <Flex align='center' justify='space-between'>
-        <Heading mr='3rem' fontSize='1.5rem'>
-          Kitchen
-        </Heading>
         <Flex align='center' justify='center'>
-          <Text mr='0.5rem'>Back to home</Text>
-          <Link as={ReactLink} to={'/'}>
+          <Link as={ReactLink} to={'/'} mr='0.5rem'>
             <Back />
           </Link>
+          <Text>Back to home</Text>
         </Flex>
+        <Heading mr='3rem' fontSize='2rem'>
+          Kitchen
+        </Heading>
       </Flex>
       <Orders />
     </Flex>
