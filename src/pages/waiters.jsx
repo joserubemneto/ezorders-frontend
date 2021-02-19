@@ -36,15 +36,15 @@ const Waiters = () => {
   return (
     <Flex direction='column' mt='3rem' maxWidth='565px' w='100%'>
       <Flex align='center' justify='space-between'>
-        <Heading mr='3rem' fontSize='1.5rem'>
-          Waiters
-        </Heading>
         <Flex align='center' justify='center'>
-          <Text mr='0.5rem'>Back to home</Text>
-          <Link as={ReactLink} to={'/'}>
+          <Link as={ReactLink} to={'/'} mr='0.5rem'>
             <Back />
           </Link>
+          <Text>Back to home</Text>
         </Flex>
+        <Heading mr='3rem' fontSize='2rem'>
+          Waiters
+        </Heading>
       </Flex>
       <Heading alignSelf='center' fontSize='1.5rem' mt='2rem'>
         New Order
