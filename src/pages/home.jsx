@@ -12,11 +12,12 @@ const Home = () => {
       textDecoration='none'>
       <Link as={RouterLink} to='/waiters' _hover={{ textDecoration: 'none' }}>
         <Button
-          fontSize='2rem'
+          fontSize='1.5rem'
           position='relative'
-          padding='1.5rem 2rem'
-          mr='3rem'
+          padding='1.5rem'
+          mr='0.5rem'
           bg='none'
+          minWidth='150px'
           overflow='hidden'
           border='2px solid #0A100D'
           color='#0A100D'
@@ -44,7 +45,7 @@ const Home = () => {
       </Link>
       <Link as={RouterLink} to='/kitchen' _hover={{ textDecoration: 'none' }}>
         <Button
-          fontSize='2rem'
+          fontSize='1.5rem'
           position='relative'
           padding='1.5rem 2rem'
           bg='none'
