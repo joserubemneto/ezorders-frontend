@@ -91,7 +91,7 @@ const Orders = () => {
           }}
           _active={{ bg: '#2AC769' }}
           onClick={clearDoneOrders}>
-          <Text>Clean done orders</Text>
+          <Text>Clear done orders</Text>
         </Button>
       </Flex>
       <SimpleGrid mt='3rem' columns={[1, 1, 2, 2]} gap='2rem'>

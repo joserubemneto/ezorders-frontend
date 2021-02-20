@@ -14,7 +14,7 @@ const Kitchen = () => {
           </Link>
           <Text>Back to home</Text>
         </Flex>
-        <Heading mr='3rem' fontSize='2rem'>
+        <Heading ml='3rem' fontSize='2rem'>
           Kitchen
         </Heading>
       </Flex>
